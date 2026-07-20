@@ -3,45 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caroline Frizeiro | Portfólio</title>
+    <title>Meu Portfólio</title>
     <style>
-        /* Remove todas as margens e bordas padrão do navegador */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        /* Define o fundo preto/escuro para preencher as sobras laterais ou superiores */
         body, html { 
             height: 100%; 
             width: 100%;
             overflow: hidden; 
-            background-color: #ffffff;
+            background-color: #000000; /* Altere para a cor de fundo desejada */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Container que esconde a barra inferior do Canva */
-        .wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: calc(100% + 40px);
-            overflow: hidden;
+        /* Container que força a proporção de apresentação 16:9 e centraliza na tela */
+        .presentation-container {
+            position: relative;
+            width: 100vw;
+            height: 56.25vw; /* Proporção 16:9 exata */
+            max-height: 100vh;
+            max-width: 177.78vh; /* Mantém a proporção sem vazar na altura */
         }
 
-        /* Força o iframe do Canva a ocupar a tela inteira sem bordas */
-        iframe { 
+        /* Garante que o iframe e os elementos do Canva preencham o container */
+        .presentation-container iframe,
+        .presentation-container div { 
             width: 100% !important; 
             height: 100% !important; 
             border: none !important; 
-            display: block; 
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="presentation-container">
 
-        <<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+        <!-- <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
   <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
@@ -49,7 +54,6 @@
   </iframe>
 </div>
 <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG6ajB9cqM&#x2F;xWFxQ2uXLiNWvy9KQ7T4eg&#x2F;view?utm_content=DAG6ajB9cqM&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" 
-
     </div>
 </body>
 </html>
