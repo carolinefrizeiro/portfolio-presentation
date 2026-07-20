@@ -2,46 +2,48 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Caroline Frizeiro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Portfólio Caroline Frizeiro - Apresentação</title>
     <style>
-        /* Zera todas as margens e bordas padrão do navegador */
-        *, *::before, *::after {
+        /* Limpeza de margens padrão de todos os navegadores */
+        * {
             box-sizing: border-box;
             margin: 0 !important;
             padding: 0 !important;
         }
 
-        /* Garante que o fundo e o corpo ocupem 100% da tela */
+        /* Garante que o fundo e o corpo ocupem toda a viewport */
         html, body { 
             height: 100% !important; 
             width: 100% !important;
             overflow: hidden !important;
-            background-color: #ffffff; /* Mude para #000000 se o fundo da apresentação for escuro */
+            background-color: #ffffff; 
         }
 
-        /* Ocupa a tela cheia mantendo o iframe responsivo */
-        .full-screen-container {
+        /* Container fixo e responsivo que ocupa a tela inteira */
+        .full-page-viewer {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw !important;
             height: 100vh !important;
+            z-index: 9999;
         }
 
-        /* Força o iframe da apresentação a preencher 100% sem bordas arredondadas ou margens */
-        .full-screen-container iframe { 
+        /* Força o iframe da apresentação a preencher a tela sem bordas ou sombras */
+        .full-page-viewer iframe { 
             width: 100% !important; 
             height: 100% !important; 
             border: none !important; 
             display: block !important;
             border-radius: 0 !important;
+            box-shadow: none !important;
         }
     </style>
 </head>
 <body>
 
-    <div class="full-screen-container">
+    <div class="full-page-viewer">
         <iframe loading="lazy" 
             src="https://www.canva.com/design/DAG6ajB9cqM/xWFxQ2uXLiNWvy9KQ7T4eg/view?embed" 
             allowfullscreen="allowfullscreen" 
